@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie List</title>
+</head>
+<body>
+	<h1>Movice List are below</h1>
+	<table border="1">
+		<tr>
+			<td>Movie Name</td>
+			<td>Release Year</td>
+		</tr>
+		
+	<% parsedata["Search"].forEach(function(movie){ %>
+		<tr>
+		<td> <%= movie["Title"] %></td>
+		<td> <%= movie["Year"] %> </td>
+		</tr>
+<% }) %>
+</table>
+<form action="/results" method="GET">
+ <input type="text" name="msearch" placeholder="Search....">
+ <input type="submit" value="Search">
+</form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<% include include/header %>
+<h1>My Friend List</h1>
+<ol>
+<% friends.forEach(function(firend){ %>
+	<li><%= firend %></li>
+<% }) %>
+</ol>
+<form action="/addfriend" method="POST">
+  <input type="text" placeholder="new friend name?" name="fname">
+  <input type="submit" value="Add" name="add">
+</form>
+<% include include/footer %>

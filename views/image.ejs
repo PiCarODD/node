@@ -1,0 +1,6 @@
+<% include include/header %>
+	<% images.forEach(function(img){%>
+		<h4><%= img.name %></h4>
+		<img src="<%= img.url %>" class="img img-circle" width="200px" height="200px">
+<% }) %>
+<% include include/footer %>
